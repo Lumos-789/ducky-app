@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  :root{--bg:#FBF7F1;--ink:#241B14;--ink-soft:#6B5D52;--accent:#C8693B;--accent-soft:#F6E6D7;--line:#ECE3D8;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#fff;padding:48px 40px;color:var(--ink);}
+  .wrap{width:720px;margin:0 auto;}
+  h1{text-align:center;font-size:26px;font-weight:800;letter-spacing:-0.01em;margin-bottom:8px;}
+  .sub{text-align:center;color:var(--ink-soft);font-size:14px;margin-bottom:40px;}
+  .flow{display:flex;flex-direction:column;align-items:center;}
+  .node{width:440px;background:#fff;border:1.5px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:18px 22px;box-shadow:0 4px 14px rgba(60,40,20,0.06);display:flex;align-items:center;gap:16px;}
+  .node .ico{font-size:26px;width:42px;height:42px;background:var(--accent-soft);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .node .txt .t{font-size:17px;font-weight:700;}
+  .node .txt .d{font-size:13px;color:var(--ink-soft);margin-top:3px;}
+  .node.key{border-left-color:#241B14;background:linear-gradient(135deg,#fff 0%,var(--accent-soft) 160%);border-color:var(--accent);}
+  .node.key .ico{background:var(--accent);color:#fff;}
+  .arrow{color:var(--accent);font-size:22px;margin:10px 0;line-height:1;}
+  .end{width:440px;background:var(--ink);color:#fff;border-radius:14px;padding:18px 22px;text-align:center;font-size:17px;font-weight:700;}
+  .end .d{font-size:13px;font-weight:400;opacity:.75;margin-top:4px;}
+  .foot{margin-top:36px;text-align:center;color:var(--ink-soft);font-size:12px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Ducky 运行流程</h1>
+  <div class="sub">从打开 App 到喝上这一杯，全链路示意</div>
+  <div class="flow">
+    <div class="node"><div class="ico">🦆</div><div class="txt"><div class="t">打开 Ducky</div><div class="d">用户启动应用</div></div></div>
+    <div class="arrow">↓</div>
+    <div class="node"><div class="ico">📡</div><div class="txt"><div class="t">采集实时环境</div><div class="d">定位 · 当前天气 · 时段</div></div></div>
+    <div class="arrow">↓</div>
+    <div class="node key"><div class="ico">🧠</div><div class="txt"><div class="t">AI 推荐引擎</div><div class="d">地点 × 天气 × 时间 × 你的历史，四维度融合计算</div></div></div>
+    <div class="arrow">↓</div>
+    <div class="node"><div class="ico">☕</div><div class="txt"><div class="t">推荐结果</div><div class="d">1 杯主推 + 2 杯备选，含推荐理由</div></div></div>
+    <div class="arrow">↓</div>
+    <div class="node"><div class="ico">👆</div><div class="txt"><div class="t">用户点「去喝」</div><div class="d">选定心仪的一杯</div></div></div>
+    <div class="arrow">↓</div>
+    <div class="node"><div class="ico">🔗</div><div class="txt"><div class="t">拉起品牌微信小程序</div><div class="d">瑞幸 / 喜茶，直达下单页</div></div></div>
+    <div class="arrow">↓</div>
+    <div class="end">用户在小程序内完成下单<div class="d">使用品牌自有账号、券与支付，Ducky 不接触交易</div></div>
+  </div>
+  <div class="foot">Ducky · AI 饮品推荐 · HarmonyOS NEXT</div>
+</div>
+</body>
+</html>
